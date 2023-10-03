@@ -11,3 +11,11 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+    networks:
+      - jenkins-network
+
+networks:
+  jenkins-network:
+    driver: bridge
