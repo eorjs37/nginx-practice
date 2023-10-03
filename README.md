@@ -23,6 +23,11 @@ docker run -d --name webserver -p 80:80 eorjs37/nginx-practice
 docker run -d --name webserver -v /etc/letsencrypt:/etc/letsencrypt -p 443:443 eorjs37/nginx-practice
 ```
 
+## docker run network + volume
+```bash
+docker run -d --name webserver -v /etc/letsencrypt:/etc/letsencrypt --network jenkins-network -p 443:443 eorjs37/nginx-practice
+```
+
 ## docker hub login
 ```bash
 docker login
